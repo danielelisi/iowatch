@@ -1,0 +1,220 @@
+html {
+    height:100%;
+}
+
+body {
+    margin:0px;
+    background-color:#c0c0c0;
+    font-family:arial;
+    color:#fff;
+}
+
+a {
+    color:#55acee;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+hr {
+    height:1px;
+    margin:20px 0px 20px 0px;
+    background-color:#fff;
+    padding:0px;
+    border:0px;
+}
+
+#clear {
+    clear:both;
+}
+    
+#top {
+    margin-left:auto;
+    margin-right:auto;
+    width:750px;
+    background-color:#2d2d2d;
+}
+
+#top_bot {
+    margin:-4px 0px 0px 0px;
+    font-size:0px;
+}
+
+#title {
+    display:inline-block;
+    font-family:copperplate gothic;
+    font-size:36px;
+    font-weight:bold;
+    color:#55acee;
+    vertical-align:top;
+}
+
+#support_div {
+    display:inline-block;
+    float:right;
+    margin:5px 20px 0px 0px;
+    letter-spacing:2px;
+}
+
+#body_div {
+    width:710px;
+    margin:0px auto 0px auto;
+    background-color:#2d2d2d;
+    padding:0px 20px 20px 20px;
+}
+
+#breadcrumb {
+    padding:5px 5px 5px 5px;
+    margin:0px 0px 25px 0px;
+    font-size:11px;
+}
+
+#features {
+    display:inline-block;
+    width:375px;
+    font-size:12px;
+    color:#c0c0c0;
+    text-align:justify;
+    line-height:1.25;
+}
+
+#features img {
+    display:block;
+}
+
+#app_download img {
+    display:inline-block;
+    width:150px;
+}
+
+#but_parent {
+    float:right;
+    width:314px;
+    font-size:0px;
+    text-align:right;
+}
+
+.but {
+    display:inline-block;
+    width:152px;
+    height:127px;
+    vertical-align:top;
+    font-weight:bold;
+    color:#55acee;
+    font-size:14px;
+    letter-spacing:2px;
+    text-align:right;
+    line-height:16;
+}
+
+.but span {
+    margin:0px 5px 0px 0px;
+}
+
+#features_but {
+    background-image:url("img/features_but_off.jpg");
+}
+
+#gallery_but {
+    background-image:url("img/gallery_but_off.jpg");
+}
+
+#order_but {
+    background-image:url("img/order_but_off.jpg");
+}
+
+#support_but {
+    background-image:url("img/support_but_off.jpg");
+}
+
+#newsletter {
+    margin:30px 0px 0px 0px;
+    font-size:12px;
+    text-align:center;
+}
+
+#button_div {
+    margin:5px 0px 0px 0px;
+    text-align:right;
+}
+
+#social_media {
+    margin:10px 0px 0px 0px;
+}
+
+#social_media img {
+    padding:0px 15px 0px 15px;
+}
+
+#parent_service_div {
+    text-align:center;
+    font-size:13px;
+}
+
+#parent_service_div p {
+    font-weight:bold;
+    text-decoration:underline;
+}
+
+.service_div {
+    display:inline-block;
+    width:125px;
+    vertical-align:top;
+}
+
+#shipping {
+    margin:0px 66px 0px auto;
+}
+
+#money_back {
+    margin:0px 33px 0px auto;
+}
+
+#tech_support {
+    margin:0px auto 0px 33px;
+}
+
+#warranty {
+    margin:0px auto 0px 66px;
+}
+
+.link_div {
+    display:inline-block;
+    font-weight:bold;
+    font-size:11px;
+    line-height:1.5;
+    vertical-align:top;
+    width:125px;
+}
+
+.link_div a {
+    display:block;
+}
+
+#features_links {
+    margin:0px 66px 0px auto;
+}
+
+#company_links {
+    margin:0px 32px 0px auto;
+}
+
+#help_links {
+    margin:0px auto 0px 32px;
+}
+
+#shop_links {
+    margin:0px auto 0px 66px;
+}
+
+#copyright {
+    font-size:10px;
+    text-align:center;
+}
+
+#copyright span {
+    display:block;
+}
