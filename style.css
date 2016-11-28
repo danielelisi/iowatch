@@ -38,6 +38,10 @@ hr {
     background-color:#2d2d2d;
 }
 
+#top a:hover {
+	text-decoration:none;
+}
+
 #top_bot {
     margin:-5px 0px 0px 0px;
     font-size:0px;
