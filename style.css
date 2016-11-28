@@ -31,14 +31,14 @@ hr {
     clear:both;
 }
     
-#top {
+#top_top{
     margin-left:auto;
     margin-right:auto;
     width:750px;
     background-color:#2d2d2d;
 }
 
-#top a:hover {
+#top_top a:hover {
 	text-decoration:none;
 }
 
