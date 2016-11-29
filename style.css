@@ -67,13 +67,15 @@ hr {
     width:710px;
     margin:0px auto 0px auto;
     background-color:#2d2d2d;
-    padding:0px 20px 20px 20px;
+    padding:25px 20px 20px 20px;
 }
 
 #breadcrumb {
-    padding:5px 5px 5px 5px;
-    margin:0px 0px 25px 0px;
+    padding:5px 20px 5px 20px;
+    margin:0px auto 0px auto;
     font-size:11px;
+    background-color:#2d2d2d;
+    width:710px;
 }
 
 #features {
@@ -183,6 +185,13 @@ hr {
 
 #warranty {
     margin:0px auto 0px 66px;
+}
+
+#footer {
+    margin:0px auto 0px auto;
+    width:710px;
+    background-color:#2d2d2d;
+    padding:20px 20px 20px 20px;
 }
 
 .link_div {
