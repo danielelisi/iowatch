@@ -299,7 +299,13 @@ h2 {
     margin:auto;
 }
 
-#body_div p {
+#left p {
+    font-size:12px;
+    line-height:1.25;
+    text-align:justify;
+}
+
+#right p {
     font-size:12px;
     line-height:1.25;
     text-align:justify;
