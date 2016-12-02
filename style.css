@@ -411,4 +411,18 @@ h2 {
 
 #notification_expand {
     display:none;
+    height:585px;
+}
+
+#notification_expand hr {
+    width:90%;
+    margin:0px;
+}
+
+.toggles {
+    display:inline-block;
+    width:52px;
+    height:40px;
+    padding:5px;
+    border:1px solid white;
 }

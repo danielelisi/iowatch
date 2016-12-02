@@ -84,8 +84,33 @@
                         </div>
                         
                         <div id="notification_expand">
-                        this is a test
+							<div class="toggles">
+								<img id="running_toggle" class="toggle_button" src="icons/running_on.png">
+							</div>
+                            
+                            <div class="toggles">
+                                <img class="toggle_button" src="icons/location_on.png">
+                            </div>
+                            
+                            <div class="toggles">
+                                <img class="toggle_button" src="icons/sync_on.png">
+                            </div>
+                            
+                            <div class="toggles">
+                                <img class="toggle_button" src="icons/wifi_on.png">
+                            </div>
+                            
+                            <div class="toggles">
+                                <img class="toggle_button" src="icons/bluetooth_on.png">
+                            </div>
+                            
+                            <div class="toggles">
+                                <img class="toggle_button" src="icons/sound_on.png">
+                            </div>
+                            
+                            <hr>
                         </div>
+                        
                     </div>
                 </div>
                 
@@ -144,6 +169,15 @@
                     $("#connections").fadeIn(1000, function(){
                         $(this).show();
                     });
+                }
+            });
+            
+            $("#running_toggle").on({
+                "click":function(){
+                    var origsrc = $(this).attr("src");
+                    var src = "";
+                    if (origsrc == "icons/running_off.png")
+                        src = "icons/running_on.png";
                 }
             });
         </script>
