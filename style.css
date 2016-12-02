@@ -12,11 +12,11 @@ body {
 a {
     color:#55acee;
     font-weight:bold;
-    text-decoration:none;
+    text-decoration:underline;
 }
 
 a:hover {
-    text-decoration:underline;
+    color:#88ceff;
 }
 
 hr {
@@ -27,24 +27,42 @@ hr {
     border:0px;
 }
 
+h2 {
+	margin:0px auto 15px auto;
+    text-decoration:underline;
+}
+
 #clear {
     clear:both;
 }
     
-#top{
+#top {
     margin-left:auto;
     margin-right:auto;
     width:750px;
     background-color:#2d2d2d;
 }
 
+#top_top {
+    font-size:14px;
+}
+
+#top_top a {
+	text-decoration:underline;
+    color:#d20000;
+}
+
 #top_top a:hover {
-	text-decoration:none;
+    color:#df5555;
 }
 
 #top_bot {
     margin:-5px 0px 0px 0px;
     font-size:0px;
+}
+
+#cart {
+    width:25px;
 }
 
 #title {
@@ -70,12 +88,18 @@ hr {
     padding:25px 20px 20px 20px;
 }
 
+#body_div span {
+    font-weight:bold;
+    line-height:2;
+}
+
 #breadcrumb {
     padding:5px 20px 5px 20px;
     margin:0px auto 0px auto;
     font-size:11px;
     background-color:#2d2d2d;
     width:710px;
+	font-weight:bold;
 }
 
 #features {
@@ -117,6 +141,9 @@ hr {
 }
 
 .but span {
+    display:block;
+    width:152px;
+    height:127px;
     margin:0px 5px 0px 0px;
 }
 
@@ -124,16 +151,32 @@ hr {
     background-image:url("img/features_but_off.jpg");
 }
 
+#features_but:hover {
+    background-image:url("img/features_but.jpg");
+}
+
 #gallery_but {
     background-image:url("img/gallery_but_off.jpg");
+}
+
+#gallery_but:hover {
+    background-image:url("img/gallery_but.jpg");
 }
 
 #order_but {
     background-image:url("img/order_but_off.jpg");
 }
 
+#order_but:hover {
+    background-image:url("img/order_but.jpg");
+}
+
 #support_but {
     background-image:url("img/support_but_off.jpg");
+}
+
+#support_but:hover {
+    background-image:url("img/support_but.jpg");
 }
 
 #newsletter {
@@ -162,7 +205,6 @@ hr {
 
 #parent_service_div p {
     font-weight:bold;
-    text-decoration:underline;
 }
 
 .service_div {
@@ -230,4 +272,63 @@ hr {
 
 #copyright span {
     display:block;
+}
+
+#left {
+    display:inline-block;
+    width:342px;
+    padding:0px 5px 0px 5px;
+}
+
+#left img {
+    display:block;
+    width:325px;
+    margin:auto;
+}
+
+#right {
+    display:inline-block;
+    width:342px;
+    vertical-align:top;
+    padding:0px 5px 0px 5px;
+}
+
+#right img {
+    display:block;
+    width:325px;
+    margin:auto;
+}
+
+#body_div p {
+    font-size:12px;
+    line-height:1.25;
+    text-align:justify;
+}
+
+.inner_heading {
+    font-weight:bold;
+    font-size:14px;
+}
+
+.inner_heading hr {
+    height:1px;
+    border:0px;
+    background-color:grey;
+    margin:2px 2px 2px 2px;
+}
+
+.inner {
+    margin:0px 0px 0px 20px;
+    font-size:12px;
+}
+
+.category {
+    width:355px;
+    vertical-align:top;
+}
+
+.specs {
+    width:355px;
+    font-weight:normal;
+    vertical-align:top;
 }
