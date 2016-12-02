@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iO Watch</title>
+        
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        
+        <script src="javascript.js"></script>
+        
+        <style type "text/css">
+            <!--
+            /* @group Blink */
+            .blink {
+                -webkit-animation: blink 2s linear infinite;
+                -moz-animation: blink 2s linear infinite;
+                -ms-animation: blink 2s linear infinite;
+                -o-animation: blink 2s linear infinite;
+                 animation: blink 2s linear infinite;
+            }
+            @-webkit-keyframes blink {
+                0% { opacity: 1; }
+                50% { opacity: 1; }
+                50.01% { opacity: 0; }
+                100% { opacity: 0; }
+            }
+            @-moz-keyframes blink {
+                0% { opacity: 1; }
+                50% { opacity: 1; }
+                50.01% { opacity: 0; }
+                100% { opacity: 0; }
+            }
+            @-ms-keyframes blink {
+                0% { opacity: 1; }
+                50% { opacity: 1; }
+                50.01% { opacity: 0; }
+                100% { opacity: 0; }
+            }
+            @-o-keyframes blink {
+                0% { opacity: 1; }
+                50% { opacity: 1; }
+                50.01% { opacity: 0; }
+                100% { opacity: 0; }
+            }
+            @keyframes blink {
+                0% { opacity: 1; }
+                50% { opacity: 1; }
+                50.01% { opacity: 0; }
+                100% { opacity: 0; }
+            }
+            /* @end */
+            -->
+        </style>
+    </head>
+    
+    <body>
+        <div id="top">
+        </div>
+        
+        <div id="breadcrumb">
+            <a href="index.html">HOME</a> > <a href="demo.html">DEMO</a>
+        </div>
+        
+        <div id="body_div">
+            <div id="screen_parent">
+                <div id="home_screen">
+                    <div id="notification_bar">
+                        <div id="notification">
+                            <img class="notification_icon" src="demo_img/n_sync.png">
+                            <img class="notification_icon" src="demo_img/n_running_icon.png">
+                            <img class="notification_icon" src="demo_img/n_message.png">
+                        </div>
+                        
+                        <div id="connections">
+                            <img class="notification_icon" src="demo_img/n_bluetooth.png">
+                            <img class="notification_icon" src="demo_img/n_location.png">
+                            <img class="notification_icon" src="demo_img/n_wifi.png">
+                            <img class="notification_icon" src="demo_img/n_reception.png">
+                            <img class="notification_icon" src="demo_img/n_battery.png"> 98%
+                        </div>
+                        
+                        <div id="notification_expand">
+                        this is a test
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="screen">
+                    <div id="thumb">
+                    </div>
+                    
+                    <div id="drop_area">
+                        <span class="tab blink">Drag your thumb here!</span>
+                    </div>
+                </div>
+                
+                <p>Select your store to scan your watch.</p>
+            </div>
+        </div>
+            
+        <div id="footer">
+        </div>
+        
+        <!-- <script>
+            var notificationDiv = document.getElementById("notification");
+            var connectionsDiv = document.getElementById("connections");
+            var notificationBar = document.getElementById("notification_bar");
+
+            notificationBar.onclick = function(){
+                notificationBar.style.height = "585px";
+            }
+        </script> -->
+        
+        <script>
+            $( "#notification_bar" ).click(function() {
+                if ( $(this).height() != 585){
+                    $( this ).animate({ height: 585 }, 1000 );
+                    $("#notification_expand").fadeIn(1000, function(){
+                        $(this).show();
+                    });
+                    
+                    $("#notification").fadeOut(600, function(){
+                        $(this).hide();
+                    });
+                    
+                    $("#connections").fadeOut(600, function(){
+                        $(this).hide();
+                    });
+                    
+                } else {
+                    $( this ).animate({ height: 30 }, 1000 );
+                    $("#notification_expand").fadeOut(600, function(){
+                        $(this).hide();
+                    });
+                    
+                    $("#notification").fadeIn(1000, function(){
+                        $(this).show();
+                    });
+                    
+                    $("#connections").fadeIn(1000, function(){
+                        $(this).show();
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -338,3 +338,77 @@ h2 {
     font-weight:normal;
     vertical-align:top;
 }
+
+#screen_parent {
+    background-color:#2d2d2d;
+    width:100%;
+    text-align:center;
+}
+
+#screen {
+    width:468px;
+    background-color:black;
+    height:585px;
+    margin:auto;
+    background-image:url("img/screen.png");
+}
+
+#drop_area {
+    position:relative;
+    width:175px;
+    height:20%;
+    margin:0px auto 0px auto;
+    top:12%;
+}
+
+#drop_area span {
+    font-size:14px;
+    line-height:6;
+}
+
+#thumb {
+    width:200px;
+    height:273px;
+    background-image:url("img/thumb.png");
+    z-index:1;
+}
+
+#home_screen {
+    width:468px;
+    background-image:url("img/flow.jpg");
+    height:585px;
+    margin:auto;
+}
+
+#notification_bar {
+    display:block;
+    background-color:rgba(0,0,0,0.5);
+    height:30px;
+    padding:2px;
+    line-height:2.5;
+    cursor: pointer;
+}
+
+#notification {
+    display:inline-block;
+    width:49%;
+    height:100%;
+    text-align:left;
+}
+
+#connections {
+    display:inline-block;
+    width:49%;
+    height:100%;
+    text-align:right;
+    font-size:14px;
+}
+
+.notification_icon {
+    height:20px;
+    margin:0px 1px 0px 1px;
+}
+
+#notification_expand {
+    display:none;
+}
