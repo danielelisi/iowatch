@@ -793,7 +793,7 @@ h2 {
 .headshot{
     border-radius: 100px;
 }
-p{
+#about_divleft p{
     font-size:16px;
     line-height:1.25;
     text-align:justify;
@@ -868,4 +868,141 @@ h5{
 }
 #submitpg{
     height:500px;
+}
+
+#form{
+    display: inline-block;
+    width: 20vw;
+}
+
+#testimon{
+    display: inline-block;
+    position: relative;
+    top: -700px;
+}
+
+#name{
+    display: table-column;
+    width: 125px;
+    margin: 5px;
+}
+
+#email{
+    width: 200px;
+    margin: 5px;
+}
+
+#phone1{
+    width: 70px;
+    margin: 5px;
+}
+
+#bill1{
+    margin: 5px;
+    display: table-cell;
+    width: 300px;
+}
+
+#bill2{
+    margin: 5px;
+    width: 115px;
+}
+
+#bill3{
+    margin: 5px;
+    width: 115px;
+    
+}#ship1{
+    margin: 5px;
+    display: table-cell;
+    width: 300px;
+}
+
+#ship2{
+    margin: 5px;
+    width: 115px;
+}
+
+#ship3{
+    margin: 5px;
+    width: 115px;
+}
+
+#nextbut{
+    margin: 10px;
+    width: 100px;
+    float: right;
+    font-weight: bold;
+    color: #FEFDFB;
+    height: 40px;
+    text-transform: uppercase;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #55ACEE), color-stop(100, #2A5575));
+    border-radius: 100px;
+}
+
+#backbut{
+    margin: 10px;
+    width: 100px;
+    float: left;
+    font-weight: bold;
+    color: #FEFDFB;
+    height: 40px;
+    text-transform: uppercase;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #55ACEE), color-stop(100, #2A5575));
+    border-radius: 100px;
+}
+
+#subbut{
+    margin: 10px;
+    width: 100px;
+    float: left;
+    font-weight: bold;
+    color: #FEFDFB;
+    height: 40px;
+    text-transform: uppercase;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #55ACEE), color-stop(100, #2A5575));
+    border-radius: 100px;
+}
+
+#Cname{
+    margin: 5px;
+    width: 150px;
+}
+
+#Cnum{
+    margin: 5px;
+    width: 150px;
+}
+
+#cardex{
+    margin: 5px;
+}
+
+#payform{
+    display: inline-block;
+}
+
+#big{
+    position: relative;
+    left: 180px;
+    top: 50px;
+}
+
+.bigpic{
+    border
+    width: 500px;
+    height: 500px;
+}
+
+#small{
+    position: relative;
+    left: 100px;
+    top: 100px;
+    height: 450px;
+}
+
+.smallpic{
+    margin: 15px;
+    width: 150px;
+    height: 150px;
 }

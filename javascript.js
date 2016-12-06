@@ -485,4 +485,15 @@ $(document).ready(function(){
             }, 4500
         );
     }
+    
+    var dispPic = document.getElementById("mainpic");
+    var smPic1 = document.getElementById("galpic1");
+    var smPic2 = document.getElementById("galpic2");
+    var smPic3 = document.getElementById("galpic3");
+    var smPic4 = document.getElementById("galpic4");
+    var smPic5 = document.getElementById("galpic5");
+    var smPic6 = document.getElementById("galpic6");
+    
+    smPic1.onclick = function(){
+    }
 });
