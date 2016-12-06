@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iO Watch</title>
+        
+        <link href="style.css" rel="stylesheet" type="text/css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        
+        <script src="javascript.js"></script>
+    </head>
+    
+    <body>
+        <div id="top">
+        </div>
+        
+        <div id="breadcrumb">
+            <a href="index.html">HOME</a> > <a href="Order.html">ORDER</a> > <a href="">PAYMENT</a>
+        </div>
+        
+        <div id="body_div">
+            <h2>Payment</h2>
+            
+            <div id="payment">
+                <div id="payform">
+                    <div id="info">
+                    Card Type <select id="card" type="text" name="cardtype">
+                        <option>Card</option>
+                        <option>Visa</option>
+                        <option>Master Card</option>
+                        <option>Amex</option>
+                        <option>Paypal</option>
+                        <option>Bitcoin</option>
+                        </select>
+                    <br>
+                    Card Holder's Name <input id="Cname" type="text" placeholder=" Name written on card" />
+                    <br>
+                    Card Number <input id="Cnum" type="text" placeholder=" Enter 16 digit number" />
+                    <br>
+                    Card Expiry Date <select id="cardex" type="text" name="cardexmon">
+                        <option>Month</option>
+                        <option>Jan 01</option>
+                        <option>Feb 02</option>
+                        <option>Mar 03</option>
+                        <option>Apr 04</option>
+                        <option>May 05</option>                        
+                        <option>Jun 06</option>
+                        <option>Jul 07</option>
+                        <option>Aug 08</option>
+                        <option>Sep 09</option>
+                        <option>Oct 10</option>
+                        <option>Nov 11</option>
+                        <option>Dec 12</option>
+                        </select>
+                    <select id="cardex" type="text" name="cardexyr">
+                        <option>Year</option>
+                        <option>2017</option>
+                        <option>2018</option>
+                        <option>2019</option>
+                        <option>2020</option>
+                        <option>2021</option>
+                        <option>2022</option>
+                        <option>2023</option>
+                        <option>2024</option>
+                        <option>2025</option>
+                        <option>2026</option>
+                        <option>2027</option>
+                        </select>
+                    </div>
+                    
+                    <hr>
+
+                    <form action="choice">
+                        <input type="radio" name="shipping" value="express">Express (2-5 Day shipping)<br>
+                        <input type="radio" name="shipping" value="standard">Standard (7-14 Day shipping)<br>
+                    </form>
+
+                    <button id="subbut">Submit</button>
+                    <button id="backbut">Back</button>
+                </div>        
+            </div>
+            
+            <hr>
+            
+            <div id="parent_service_div">
+                <div class="service_div" id="shipping">
+                    <img class="icon2" src="img/shipping_icon.png">
+
+                    <p>Free Shipping</p>
+
+                    And free returns anywhere within North America.
+                </div>
+
+                <div class="service_div" id="money_back">
+                    <img class="icon2" src="img/money_icon.png">
+
+                    <p>Money Back Guaranteed  </p>
+
+                    If you're not satisfied with our product within 30 days.
+                </div>
+
+                <div class="service_div" id="tech_support">
+                    <img class="icon2" src="img/tech_support_icon.png">
+
+                    <p>Live Support</p>
+
+                    A tech support representative is standing by 24/7.
+                </div>
+
+                <div class="service_div" id="warranty">
+                    <img class="icon2" src="img/warranty_icon.png">
+
+                    <p>3 years</p>
+
+                    Manufacturer's warranty that covers all mechanical defects.
+                </div>
+            </div>
+            
+            <hr>
+        </div>
+            
+        <div id="footer">
+        </div>
+    </body>
+</html>
