@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iO Watch</title>
+        
+        <link href="style.css" rel="stylesheet" type="text/css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        
+        <script src="javascript.js"></script>
+    </head>
+    
+    <body>
+        <div id="top">
+        </div>
+        
+        <div id="breadcrumb">
+            <a href="index.html">HOME</a> > <a href="">ORDER</a>
+        </div>
+        
+        <div id="body_div">
+            <h2>ORDER FORM</h2>
+            
+            <div id="order">
+                <div id="form">
+                    <div id="info">
+                    <p>Full Name</p>
+                    <input id="name" type="text" placeholder=" First Name" />
+                    <input id="name" type="text" placeholder=" Middle Name" />
+                    <input id="name" type="text" placeholder=" Last Name" />
+
+                    <p>Email</p>
+                    <input id="email" type="text" placeholder=" Ex: yourname@example.com" />
+
+                    <p>Contact Number</p>   
+                    <input id="phone1" type="text" placeholder=" Area Code" />
+                    <input id="phone" type="text" placeholder=" Phone Number" />
+                    </div>
+                    
+                    <hr>
+                    <div id="billing">
+                    <p>Billing Address</p>
+                    <input id="bill1" type="text" placeholder=" Street Address" />
+                    <input id="bill1" type="text"  placeholder=" Street Address 2" />
+                    <input id="bill2" type="text" placeholder=" City" />
+                    <input id="bill2" type="text" placeholder=" State / Province" />
+                    <input id="bill3" type="text" placeholder=" Postal / Zip Code" />
+                    <select id="bill3" name="countrycode">
+                        <option>Select Country</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                    </select>
+                    </div>
+                    <hr>
+                    <div id="shipping">
+                    <p>Shipping</p>
+                    Same as Billing <input type="checkbox" id="sameasbilling">
+                    <input id="ship1" type="text" placeholder=" Street Address" />
+                    <input id="ship1" type="text"  placeholder=" Street Address 2" />
+                    <input id="ship2" type="text" placeholder=" City" />
+                    <input id="ship2" type="text" placeholder=" State / Province" />
+                    <input id="ship3" type="text" placeholder=" Postal / Zip Code" />
+                    <select id="ship3" name="country">
+                        <option>Select Country</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                    </select>
+                    </div>
+                    <input type=button onClick="location.href='payment.html'" value='Next' id="nextbut"/>
+                    
+                </div>
+                
+                <div id="testimon">
+                    <h2>Testimonials</h2>
+                    <div id="custest">
+                        <p>Katie J.<br> This watch is great, its so easy to use and I am not worried when I do not have my wallet with me. 5/5</p>
+                        <br>
+                        <p>Anthony W. <br> This watch makes sure that I always get the best deals when shopping. I also love that I never have to pull out my transit card when getting off the metro. Thanks iOwatch 5/5.</p>
+                        <br>
+                        <p>Roger W. <br> The iOwatch totally changed my world, I don't feel naked anymore when I forget my wallet. 4/5.</p>
+                        <br>
+                        <p>Christopher G. <br>This watch totally destroys the Apple Iwatch. This watch is much more userfriendly and more cost efficient. THe only thing I dislike about this watch is that it does not come in different colors. 4/5</p>
+                    </div>
+                    <hr>
+                </div>
+                
+            </div> 
+            <hr>
+            <div id="parent_service_div">
+                <div class="service_div" id="shipping">
+                    <img class="icon2" src="img/shipping_icon.png" alt="shippingicon">
+
+                    <p>Free Shipping</p>
+
+                    And free returns anywhere within North America.
+                </div>
+
+                <div class="service_div" id="money_back">
+                    <img class="icon2" src="img/money_icon.png" alt="moneyicon">
+
+                    <p>Money Back Guaranteed  </p>
+
+                    If you're not satisfied with our product within 30 days.
+                </div>
+
+                <div class="service_div" id="tech_support">
+                    <img class="icon2" src="img/tech_support_icon.png" alt="techicon">
+
+                    <p>Live Support</p>
+
+                    A tech support representative is standing by 24/7.
+                </div>
+
+                <div class="service_div" id="warranty">
+                    <img class="icon2" src="img/warranty_icon.png" alt="warrantyicon">
+
+                    <p>3 years</p>
+
+                    Manufacturer's warranty that covers all mechanical defects.
+                </div>
+            </div>
+            
+            <hr>
+        </div>
+            
+        <div id="footer">
+        </div>
+    </body>
+</html>
