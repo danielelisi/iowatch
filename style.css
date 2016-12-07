@@ -106,7 +106,7 @@ h2 {
     display:inline-block;
     width:375px;
     font-size:12px;
-    color:#c0c0c0;
+    color:#fff;
     text-align:justify;
     line-height:1.25;
 }
@@ -339,12 +339,25 @@ h2 {
     vertical-align:top;
 }
 
+#stores {
+    width:75px;
+    height:605px;
+    display:inline-block;
+    vertical-align:top;
+    margin:0px 30px 0px 0px;
+}
+
+#stores div {
+    display:none;
+    margin:0px auto 20px auto;
+}
+
 #screen_parent {
     width:500px;
     text-align:center;
     padding:16px 0px 16px 0px;
-    margin:0px auto 0px auto;
     background-color:#55acee;
+    display:inline-block;
 }
 
 #screen {
@@ -422,7 +435,7 @@ h2 {
 
 #notification_expand hr {
     width:90%;
-    margin:0px auto 0px auto;
+    margin:30px auto 30px auto;
 }
 
 .toggles {
@@ -432,12 +445,6 @@ h2 {
     padding:5px;
     border:1px solid white;
     cursor:pointer;
-}
-
-#arunning_toggle {
-    background-image:url("icons/running_off.png");
-    background-repeat:no-repeat;
-    background-size:cover;
 }
 
 #collapse {
@@ -462,6 +469,7 @@ h2 {
     font-weight:bold;
     line-height:0.7;
     margin:5px 0px 0px 0px;
+    vertical-align:top;
 }
 
 #timedate span {
@@ -470,9 +478,20 @@ h2 {
 
 #weather {
     display:inline-block;
-    background-color:white;
-    width:26%;
+    width:25%;
+    height:110px;
     margin:0px 0px 0px 1%;
+}
+
+#weather_icon {
+    width:83px;
+    display:inline-block;
+    vertical-align:top;
+}
+
+#weather_temp {
+    font-size:36px;
+    text-align:center;
 }
 
 .main_menu {
@@ -521,6 +540,95 @@ h2 {
     height:552px;
     background-color:rgba(0,0,0,0.3);
     text-align:left;
+}
+
+#tapped_screen {
+    display:none;
+    width:468px;
+    height:552px;
+    overflow-y:auto;
+}
+
+.tapped_div {
+    height:50px;
+    margin:0px 0px 20px 0px;
+}
+
+#store_icon {
+    width:175px;
+    height:175px;
+    margin:10px auto 20px 10px;
+    display:inline-block;
+    float:left;
+}
+
+.store_div {
+    cursor:pointer;
+}
+
+#purchase_div {
+    font-size:26px;
+    font-weight:bold;
+}
+
+#purchase_note, #benefits_div {
+    text-align:left;
+    padding:0px 0px 0px 25px;
+    font-size:18px;
+}
+
+#dismiss {
+    width:175px;
+    height:50px;
+    background-color:black;
+    border:1px solid white;
+    color:white;
+    font-size:26px;
+    font-weight:bold;
+    display:inline-block;
+    float:right;
+    margin:75px 10px 0px 0px;
+}
+
+#dismiss2 {
+    width:175px;
+    height:50px;
+    background-color:black;
+    border:1px solid white;
+    color:white;
+    font-size:26px;
+    font-weight:bold;
+    display:inline-block;
+    margin:0px 10px 0px 10px;
+}
+
+#alert_icon {
+    width:175px;
+    height:175px;
+    margin:20px auto 0px auto;
+}
+
+.alert_message {
+    font-size:26px;
+    font-weight:bold;
+    text-align:center;
+    margin:10px 0px 150px 0px;
+}
+
+#insufficient_fund_screen {
+    display:none;
+}
+
+#reload {
+    width:175px;
+    height:50px;
+    background-color:black;
+    border:1px solid white;
+    color:white;
+    font-size:26px;
+    font-weight:bold;
+    display:inline-block;
+    margin:0px 10px 0px 10px;
 }
 
 #message_body {
@@ -735,4 +843,573 @@ h2 {
     overflow-y:auto;
     background-color:rgba(0,0,0,0.3);
     max-height:355px;
+}
+
+#t_heartrate_screen {
+    display:none;
+    text-align:center;
+    font-size:26px;
+}
+
+#t_exercise_screen {
+    display:none;
+}
+
+#t_gc_screen {
+    display:none;
+    height:463px;
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+
+#t_tasks_screen {
+    display:none;
+}
+
+#t_steps_screen {
+    display:none;
+}
+
+.exercise_time {
+    font-size:26px;
+    padding:0px 0px 0px 10px;
+    font-weight:bold;
+}
+
+#calories {
+    margin:26px 0px 0px 0px;
+    text-align:center;
+    font-size:26px;
+    font-weight:bold;
+    line-height:0;
+}
+
+#calories span {
+    display:block;
+    margin:-50px 0px 0px 0px;
+    font-size:168px;
+}
+
+.card_div {
+    padding:5px;
+}
+
+.card_icon {
+    display:inline-block;
+    width:100px;
+    vertical-align:middle;
+}
+
+.card_balance {
+    display:inline-block;
+    width:245px;
+    font-size:26px;
+    font-weight:bold;
+}
+
+.reload_icon {
+    display:inline-block;
+    width:100px;
+    vertical-align:top;
+    cursor:pointer;
+}
+
+#steps_number {
+    display:inline-block;
+    width:35px;
+    height:300px;
+    vertical-align:top;
+}
+
+#steps_outer_graph {
+    position:relative;
+    display:inline-block;
+    border-left:1px solid white;
+    border-bottom:1px solid white;
+    width:400px;
+    height:300px;
+    margin:0px auto 0px auto;
+    padding:0px 0px 5px 12px;
+    text-align:left;
+}
+
+#hidden_inner_bar {
+    width:1px;
+    height:300px;
+    display:inline-block;
+}
+
+.steps_inner_bar {
+    display:inline-block;
+    width:40px;
+    height:100%;
+    margin:0px 12px 0px 0px;
+}
+
+#steps_days {
+    width:400px;
+    height:30px;
+    text-align:left;
+    margin:0px 0px 0px 62px;
+}
+
+.steps_days_div {
+    display:inline-block;
+    width:42px;
+    margin:0px 10px 0px 0px;
+}
+
+.steps_number_div {
+    height:100px;
+}
+
+#day_one {
+    height:210px;
+    background-color:aqua;
+}
+
+#day_two {
+    height:280px;
+    background-color:beige;
+}
+
+#day_three {
+    height:270px;
+    background-color:brown;
+}
+
+#day_four {
+    height:260px;
+    background-color:cadetblue;
+}
+
+#day_five {
+    height:240px;
+    background-color:darkorange;
+}
+
+#day_six {
+    height:230px;
+    background-color:blueviolet;
+}
+
+#day_seven {
+    height:140px;
+    background-color:dodgerblue;
+}
+
+#steps_count {
+    font-size:26px;
+}
+
+#steps_body {
+    text-align:center;
+}
+
+.tasks_checkbox {
+    width:40px;
+    height:40px;
+    display:inline-block;
+    padding:5px;
+    vertical-align:top;
+}
+
+.checkbox {
+    width:40px;
+    height:40px;
+    border-radius:30%;
+    background-color:black;
+    border:1px solid white;
+    cursor:pointer;
+    text-align:center;
+    color:red;
+    font-size:36px;
+    font-weight:bold;
+}
+
+.tasks_name {
+    width:400px;
+    height:50px;
+    display:inline-block;
+    font-size:26px;
+    line-height:2;
+}
+
+.toggle_title {
+    display:inline-block;
+    margin:0px 0px 0px 20px;
+    font-size:36px;
+}
+
+.slider {
+    display:inline-block;
+}
+
+.toggle_div {
+    padding:0px 0px 0px 10px;
+    margin:20px 0px 20px 0px;
+    text-align:left;
+}
+
+input[type=range] {
+    width:300px;
+}
+
+.check_box {
+    width:50px;
+}
+
+#brightness {
+    display:inline-block;
+    width:350px;
+    text-align:left;
+    font-weight:bold;
+}
+
+#brightness_layer {
+    width:468px;
+    height:585px;
+    position:absolute;
+    opacity:0.0;
+    background-color:black;
+    z-index:3;
+    pointer-events:none;
+}
+
+#auto_brightness {
+    display:inline-block;
+    width:75px;
+    margin:0px 0px 0px 15px;
+}
+
+.notification_icons {
+    display:inline-block;
+}
+
+#notification_box_parent {
+    background-color:rgba(255,255,255,0.3);
+}
+
+.notification_box {
+    font-size:14px;
+    text-align:left;
+    padding:10px;
+}
+
+.notification_message {
+    margin:-10px 0px 0px 0px;
+}
+
+.notification_box span {
+    display:block;
+    font-size:14px;
+    margin:0px 0px -10px 40px;
+}
+
+.notification_title {
+    display:inline-block;
+    font-size:20px;
+    font-weight:bold;
+}
+
+#loading_screen {
+    display:none;
+}
+
+#loading_icon {
+    margin:30px auto 0px auto;
+}
+
+#loading_icon img {
+    width:315px;
+    height:319px;
+}
+
+#loading_status {
+    margin:30px auto auto auto;
+    font-size:26px;
+}
+
+/* Creighton and Robin CSS */
+
+#banner-company{
+    width: 710px;
+    opacity: 0.8;
+    
+}
+#contact1{
+    display: inline-block;
+    width: 350px;
+    height: 80px;
+    float: left;
+}
+#contact2{
+    width: 350px;
+    float: right;
+}
+#livesupportimg{
+    float: right;
+    padding-bottom: 15px;
+}
+#livesupportBut{
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    color: #FEFDFB;
+    float: right;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 115%;
+    border-radius: 50px;
+}
+
+#about_divleft{
+    width: 50%;
+    height: 100%;
+}
+#about_divright{
+    width: 50%;
+    height: 100%;
+}
+.team2-left{ 
+    float: left; 
+    width: 33%; 
+    
+}
+.team3-right{ 
+    float: right; 
+    width: 33%; 
+    
+}
+.team1-center{
+     display: inline-block; 
+     width: 33%; 
+     
+}
+.headshot{
+    border-radius: 100px;
+}
+#about_divleft p{
+    font-size:16px;
+    line-height:1.25;
+    text-align:justify;
+}
+h4{
+    color: #000;
+}
+#contact-container{
+    display:  inline-block;
+    width: 710px;
+    height:600px;
+    
+}
+#contact-left{
+    display:  inline-block;
+    width: 375px;
+    height: 400px;
+    float: left;
+
+}
+#contact-right{
+    display:  inline-block;
+    width: 280px;
+    height:  525px;
+    margin-left: 25px;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #6D6E72), color-stop(75, #736063));
+
+}
+.input{
+    width: 95%;
+    margin-left: 15px;
+}
+#inputname{
+    width: 95%;
+    height: 20px;
+    
+}
+#inputemail{
+    width: 95%;
+    height: 20px;
+    
+}
+#inputsubject{
+    width: 95%;
+    height: 20px;
+    
+}
+#inputmessage{
+    width: 95%;
+    height:120px;
+    
+}
+#submit{
+    float: right;
+    font-weight: bold;
+    color: #FEFDFB;
+    width: 50%;
+    height: 40px;
+    text-transform: uppercase;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #55ACEE), color-stop(100, #2A5575));
+    border-radius: 100px;
+
+}
+h5{
+    line-height: none;
+    margin: 2px 0 0 0;
+    font-size: 14px;
+}
+#submitpg{
+    height:500px;
+}
+
+#form{
+    display: inline-block;
+    width: 20vw;
+    width: 400px;
+    height: 800px;
+	vertical-align:top;
+}
+
+#testimon{
+    display: inline-block;
+    width: 300px;
+    height:  800px;
+}
+
+#name{
+    display: table-column;
+    width: 125px;
+    margin: 5px;
+}
+
+#email{
+    width: 200px;
+    margin: 5px;
+}
+
+#phone1{
+    width: 70px;
+    margin: 5px;
+}
+
+#bill1{
+    margin: 5px;
+    display: table-cell;
+    width: 300px;
+}
+
+#bill2{
+    margin: 5px;
+    width: 115px;
+}
+
+#bill3{
+    margin: 5px;
+    width: 115px;
+    
+}#ship1{
+    margin: 5px;
+    display: table-cell;
+    width: 300px;
+}
+
+#ship2{
+    margin: 5px;
+    width: 115px;
+}
+
+#ship3{
+    margin: 5px;
+    width: 115px;
+}
+
+#nextbut{
+    margin: 10px;
+    width: 100px;
+    float: right;
+    font-weight: bold;
+    color: #FEFDFB;
+    height: 40px;
+    text-transform: uppercase;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #55ACEE), color-stop(100, #2A5575));
+    border-radius: 100px;
+}
+
+#backbut{
+    margin: 10px;
+    width: 100px;
+    float: left;
+    font-weight: bold;
+    color: #FEFDFB;
+    height: 40px;
+    text-transform: uppercase;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #55ACEE), color-stop(100, #2A5575));
+    border-radius: 100px;
+}
+
+#subbut{
+    margin: 10px;
+    width: 100px;
+    float: left;
+    font-weight: bold;
+    color: #FEFDFB;
+    height: 40px;
+    text-transform: uppercase;
+    background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #55ACEE), color-stop(100, #2A5575));
+    border-radius: 100px;
+}
+
+#Cname{
+    margin: 5px;
+    width: 150px;
+}
+
+#Cnum{
+    margin: 5px;
+    width: 150px;
+}
+
+#cardex{
+    margin: 5px;
+}
+
+#payform{
+    display: inline-block;
+}
+
+#big{
+    position: relative;
+    left: 180px;
+    top: 50px;
+}
+
+.bigpic{
+    width: 500px;
+    height: 500px;
+}
+
+#small{
+    position: relative;
+    left: 100px;
+    top: 100px;
+    height: 450px;
+}
+
+.smallpic{
+    margin: 15px;
+    width: 150px;
+    height: 150px;
+}
+
+#custest{
+    margin-left: 10px;
+}
+
+#order{
+    width: 100%;
+    height: 825px;
 }

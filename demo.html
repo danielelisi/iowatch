@@ -1,2 +1,711 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        
+        <title>iO Watch</title>
+        
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link href="animated.css" rel="stylesheet" type="text/css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="jquery.rotate.1-1.js"></script>
+        
+        <script src="javascript.js"></script>
+    </head>
+    
+    <body>
+        <div id="top">
+        </div>
+        
+        <div id="breadcrumb">
+            <a href="index.html">HOME</a> > <a href="demo.html">DEMO</a>
+        </div>
+        
+        <div id="body_div">
+            <div id="steps_count">Select a store on the left to tap.</div>
+            
+            <div id="stores">
+                <div class="store_div"><img id="starbucks_store" src="demo_img/starbucks_store_icon.png"></div>
+                
+                <div class="store_div"><img id="esso_store" src="demo_img/esso_store_icon.png"></div>
+                    
+                <div class="store_div"><img id="translink_store" src="demo_img/translink_store_icon.png"></div>
+                
+                <div class="store_div"><img id="shoppers_store" src="demo_img/shoppers_store_icon.png"></div>
+            </div>
+            
+            <div id="screen_parent">                
+                <div id="home_screen">
+                    <div id="brightness_layer"></div>
+                    
+                    <div id="notification_bar">
+                        <div id="notification">
+                            <img class="notification_icon" src="demo_img/n_sync.png">
+                            <img class="notification_icon" src="demo_img/n_running_icon.png">
+                            <img class="notification_icon" src="demo_img/n_message.png">
+                        </div>
 
+                        <div id="connections">
+                            <img class="notification_icon" src="demo_img/n_bluetooth.png">
+                            <img class="notification_icon" src="demo_img/n_location.png">
+                            <img class="notification_icon" src="demo_img/n_wifi.png">
+                            <img class="notification_icon" src="demo_img/n_reception.png">
+                            <img class="notification_icon" src="demo_img/n_battery.png"> 98%
+                        </div>
+
+                        <div id="notification_expand">
+                            <div class="toggles" id="running_toggle">
+                                <img id="running_on" src="icons/running_on.png"><img id="running_off" src="icons/running_off.png" style="display:none">
+                            </div>
+
+                            <div class="toggles" id="sound_toggle">
+                                <img id="sound_on" src="icons/sound_on.png"><img id="sound_off" src="icons/sound_off.png" style="display:none">
+                            </div>
+
+                            <div class="toggles" id="sync_toggle">
+                                <img id="sync_on" src="icons/sync_on.png"><img id="sync_off" src="icons/sync_off.png" style="display:none">
+                            </div>
+
+                            <div class="toggles" id="bt_toggle">
+                                <img id="bluetooth_on" src="icons/bluetooth_on.png"><img id="bluetooth_off" src="icons/bluetooth_off.png" style="display:none">
+                            </div>
+
+                            <div class="toggles" id="location_toggle">
+                                <img id="location_on" src="icons/location_on.png"><img id="location_off" src="icons/location_off.png" style="display:none">
+                            </div>
+
+                            <div class="toggles" id="wifi_toggle">
+                                <img id="wifi_on" src="icons/wifi_on.png"><img id="wifi_off" src="icons/wifi_off.png" style="display:none">
+                            </div>
+
+                            <hr>
+                            
+                            <div id="display_control">
+                                <div id="brightness">
+                                   Brightness: <span id="brightness_percent">100%</span>
+                                    <input id="brightness_control" type="range" value="100" min="0" max="100" step="1">
+                                </div>
+
+                                <div id="auto_brightness">
+                                    Auto:
+                                    <input id="brightness_checkbox" type="checkbox" checked="">
+                                </div>
+                            </div>
+                            
+                            <hr>
+                            
+                            <div id="notification_box_parent">
+                                <div class="notification_box">
+                                    <img class="notification_icons" src="demo_img/transaction_complete_icon.png"> <div class="notification_title">Transaction Complete! (4)</div>
+
+                                    <div class="notification_message">
+                                        <span>You made a purchase at Starbucks!</span>
+                                        <span>You made a purchase at Starbucks!</span>
+                                        <span>You made a purchase at Best Buy!</span>
+                                        <span>You made a purchase at Tim Horton's!</span>
+                                    </div>
+                                </div>
+
+                                <div class="notification_box">
+                                    <img class="notification_icons" src="demo_img/gmail_icon.png"> <div class="notification_title">8 new messages</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="collapse">
+                        <img src="icons/collapse.png">
+                    </div>
+                    
+                    <div id="insufficient_fund_screen">
+                        <div id="alert_icon"></div>
+                        
+                        <div class="alert_message"></div>
+                        
+                        <div class="options">
+                            <button id="reload">Reload</button>
+                            <button id="dismiss2">Dismiss</button>
+                        </div>
+                    </div>
+                    
+                    <div id="loading_screen">
+                        <div id="loading_icon"><img src="demo_img/loading2.gif"></div>
+                        
+                        <div id="loading_status"></div>
+                    </div>
+                    
+                    <div id="tapped_screen">
+                        <div id="store_icon" class="tapped_div"></div>
+                        
+                        <button id="dismiss">Dismiss</button>
+                        
+                        <div id="clear"></div>
+                        
+                        <hr>
+                        
+                        <div id="purchase_div" class="tapped_div"></div>
+                        
+                        <div id="purchase_note" class="tapped_div"></div>
+                        
+                        <div id="benefits_div" class="tapped_div"></div>
+                    </div>
+                    
+                    <div id="screen_body">
+                        <div id="main">
+                            <div id="timedate">
+                            </div>
+
+                            <div id="weather">
+                                <div id="weather_icon"></div>
+                                <div id="weather_desc"></div>
+                                
+                                <div id="weather_temp"></div>
+                            </div>
+
+                            <div class="main_menu">
+                                <div id="main_payment">
+                                    <img id="cc" src="demo_img/main_cc.png">
+                                </div>
+
+                                <div id="main_message">
+                                    <img id="message" src="demo_img/main_message.png">
+                                </div>
+                            </div>
+
+                            <div class="main_menu">
+                                <div id="main_tracking">
+                                    <img id="tracking" src="demo_img/main_tracking.png">
+                                </div>
+
+                                <div id="main_camera">
+                                    <img id="camera" src="demo_img/main_camera.png">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="popup_payment_selection">
+                            <img id="mc" src="demo_img/payment_mc.png">
+                            <img id="visa" src="demo_img/payment_visa.png">
+                            <img id="discover" src="demo_img/payment_discover.png">
+                            <img id="ax" src="demo_img/payment_ax.png">
+                            <img id="interac" src="demo_img/payment_interac.png">
+                            <img id="auto_cc" src="demo_img/payment_cc.png">
+                        </div>
+
+                        <div id="message_screen">
+                            <div id="screen_nav">
+                                <div class="nav_button" id="back_div"><span class="nav_span" id="message_back_button">BACK</span></div>
+
+                                <div class="nav_button" id="home_div"><span class="nav_span" id="message_home_button">HOME</span></div>
+                            </div>
+                            
+                            <div class="screen_title">
+                                <img src="demo_img/message_title_icon.png"> <span>MESSAGE</span>
+                            </div>
+                            
+                            <div id="message_menu">
+                                <img id="inbox" src="demo_img/message_inbox.png">
+                                <img id="outbox" src="demo_img/message_outbox.png">
+                                <img id="archive" src="demo_img/message_archive.png">
+                                <img id="trash" src="demo_img/message_delete.png">
+                            </div>
+
+                            <div id="message_body">
+                                <div id="inbox_screen" class="message_field">
+                                    <div class="message">
+                                        <div id="recipient">
+                                            <div class="new_message">Donald Trump</div>
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            <div class="new_message">11/18/2016<br>4:41 PM</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="message">
+                                        <div id="recipient">
+                                            Donald Trump
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            11/18/2016<br>4:30 PM
+                                        </div>
+                                    </div>
+
+                                     <div class="message">
+                                        <div id="recipient">
+                                            Donald Trump
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            11/18/2016<br>4:12 PM
+                                        </div>
+                                    </div>
+
+                                     <div class="message">
+                                        <div id="recipient">
+                                            Snoop Dogg
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            11/18/2016<br>4:03 PM
+                                        </div>
+                                    </div>
+
+                                     <div class="message">
+                                        <div id="recipient">
+                                            Snoop Dogg
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            11/02/2016<br>2:13 PM
+                                        </div>
+                                    </div>
+
+                                    <div class="message">
+                                        <div id="recipient">
+                                            Snoop Dogg
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            11/02/2016<br>2:01 PM
+                                        </div>
+                                    </div>
+
+                                    <div class="message">
+                                        <div id="recipient">
+                                            Bill Gates
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            10/25/2016<br>7:45 PM
+                                        </div>
+                                    </div>
+
+                                    <div class="message">
+                                        <div id="recipient">
+                                            Bill Gates
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            10/25/2016<br>7:36 PM
+                                        </div>
+                                    </div>
+
+                                    <div class="message">
+                                        <div id="recipient">
+                                            Bill Gates
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            10/25/2016<br>7:22 PM
+                                        </div>
+                                    </div>
+
+                                    <div class="message">
+                                        <div id="recipient">
+                                            Bill Gates
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            10/25/2016<br>7:01 PM
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="outbox_screen" class="message_field">
+                                    <div class="sent">
+                                        <div id="recipient">
+                                            Robin Gill
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            Donald Trump<br>
+                                            11/18/2016 4:30 PM
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="archive_screen" class="message_field">
+                                    <div class="archived">
+                                        <div id="recipient">
+                                            John Smith
+                                        </div>
+
+                                        <div id="message_datetime">
+                                            06/12/2016<br>11:13 AM
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="trash_bin">
+                                    <div id="trash_bin_child" class="message_field">
+                                        <div class="deleted">
+                                            <div id="recipient">
+                                                John Smith
+                                            </div>
+
+                                            <div id="message_datetime">
+                                                03/12/2015 10:59 AM
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="message_open">
+                                    <div id="inbox_message">                                        
+                                        <b>From: Donald Trump</b>
+
+                                        <div class="message_field">
+                                            <p>In that case, I will consider investing $300,000 into your product. Please provide me with a detailed proposal and deliver it to my secretary by tomorrow afternoon.</p>
+
+                                            <p>This product will make America a great country to live in again!</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="outbox_message">
+                                        <b>To: Donald Trump</b>
+                                        
+                                        <div class="message_field">
+                                            That's good news! We hope to hear from you soon!
+                                        </div>
+                                    </div>
+                                    
+                                    <div id="message_open_menu">
+                                        <div id="reply_button" class="message_button">
+                                            <img src="demo_img/reply_button.png">
+                                        </div>
+                                        
+                                        <div id="archive_button" class="message_button">
+                                            <img src="demo_img/archive_button.png">
+                                        </div>
+                                        
+                                        <div id="delete_button" class="message_button">
+                                            <img src="demo_img/delete_button.png">
+                                        </div>
+                                        
+                                        <div id="message_status">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="reply_screen">
+                                    <img src="demo_img/listening.png"><br>
+                                    
+                                    Listening...
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="tracking_screen">
+                            <div id="screen_nav">
+                                <div class="nav_button" id="back_div"><span class="nav_span" id="tracking_back_button">BACK</span></div>
+
+                                <div class="nav_button" id="home_div"><span class="nav_span" id="tracking_home_button">HOME</span></div>
+                            </div>
+                            
+                            <div id="tracking_body">
+                                <div id="tracking_menu">
+                                    <div class="screen_title">
+                                        <img src="demo_img/tracking_title_icon.png"> <span>TRACKING</span>
+                                    </div>
+
+                                    <div class="tracking_submenu">
+                                        <div class="tracking_icon_div">
+                                            <img id="financial" src="demo_img/tracking_financial.png">
+                                        </div>
+
+                                        <div class="tracking_icon_div">
+                                            <img id="heartrate" src="demo_img/tracking_heartrate.png">
+                                        </div>
+
+                                        <div class="tracking_icon_div">
+                                            <img id="exercise" src="demo_img/tracking_exercise.png">
+                                        </div>
+                                    </div>
+
+                                    <div class="tracking_submenu">
+                                        <div class="tracking_icon_div">
+                                            <img id="gc" src="demo_img/tracking_gc.png">
+                                        </div>
+
+                                        <div class="tracking_icon_div">
+                                            <img id="tasks" src="demo_img/tracking_tasks.png">
+                                        </div>
+
+                                        <div class="tracking_icon_div">
+                                            <img id="steps" src="demo_img/tracking_steps.png">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="t_financial_screen">
+                                    <div class="screen_title">
+                                        <img src="demo_img/financial_title_icon.png"> <span>TRANSACTIONS</span>
+                                    </div>
+
+                                    <div id="financial_month">
+                                        <div id="sept" class="month_tab">Sep</div>
+                                        <div id="oct" class="month_tab">Oct</div>
+                                        <div id="nov" class="month_tab">Nov</div>
+                                        <div id="dec" class="month_tab">Dec</div>
+                                    </div>
+
+                                    <div id="financial_body">
+                                        <div class="merchant_parent">
+                                            <div id="merchant_name" class="merchant">
+                                                Starbucks
+                                            </div>
+
+                                            <div id="merchant_price" class="merchant">
+                                                $5.20
+                                            </div>
+                                        </div>
+
+                                        <div class="merchant_parent">
+                                            <div id="merchant_name" class="merchant">
+                                                Best Buy
+                                            </div>
+
+                                            <div id="merchant_price" class="merchant">
+                                                $687.56
+                                            </div>
+                                        </div>
+
+                                        <div class="merchant_parent">
+                                            <div id="merchant_name" class="merchant">
+                                                Tim Horton's
+                                            </div>
+
+                                            <div id="merchant_price" class="merchant">
+                                                $1.97
+                                            </div>
+                                        </div>
+
+                                        <div class="merchant_parent">
+                                            <div id="merchant_name" class="merchant">
+                                                Starbucks
+                                            </div>
+
+                                            <div id="merchant_price" class="merchant">
+                                                $1.98
+                                            </div>
+                                        </div>
+
+                                        <div class="merchant_parent">
+                                            <div id="merchant_name" class="merchant">
+                                                Starbucks
+                                            </div>
+
+                                            <div id="merchant_price" class="merchant">
+                                                $1.98
+                                            </div>
+                                        </div>
+
+                                        <div class="merchant_parent">
+                                            <div id="merchant_name" class="merchant">
+                                                Starbucks
+                                            </div>
+
+                                            <div id="merchant_price" class="merchant">
+                                                $1.98
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id ="t_heartrate_screen">
+                                    <div class="screen_title">
+                                        <img src="demo_img/heartrate_title_icon.png"> <span>HEARTRATE</span>
+                                    </div>
+                                    
+                                    <img src="demo_img/heart_rate_monitor.gif"><br>
+                                    59 BPM
+                                </div>
+                                
+                                <div id="t_exercise_screen">
+                                    <div class="screen_title">
+                                        <img src="demo_img/exercise_title_icon.png"> <span>EXERCISE</span>
+                                    </div>
+                                        
+                                    <div class="exercise_time">Time Start: 0:00:00</div>
+                                    <div class="exercise_time">Time End: 0:00:00</div>
+                                    <div class="exercise_time">Distance: 0.0 km</div>
+                                    <div class="exercise_time">Average Speed: 0.0 km</div>
+                                    
+                                    <hr>
+
+                                    <div id="calories">Calories Burned:<br>
+                                    <span>0</span></div>
+                                </div>
+                                
+                                <div id="t_gc_screen">
+                                    <div class="screen_title">
+                                        <img src="demo_img/gc_title_icon.png"> <span>CARD BALANCES</span>
+                                    </div>
+                                    
+                                    <div class="toggle_div">
+                                        <div class="slider">
+                                            <div class="slideThree">	
+                                                <input type="checkbox" value="None" id="autoreload" name="autoreload" />
+                                                <label for="autoreload"></label>
+                                            </div>
+                                        </div>
+                                
+                                        <div class="toggle_title">AUTO-RELOAD</div>
+                                    </div>
+                                    
+                                    <div class="card_div">
+                                        <div class="card_icon"><img src="demo_img/starbucks_icon.png"></div>
+                                        
+                                        <div class="card_balance">Balance: $<span id="starbucks_dollar">2.30</span></div>
+                                        
+                                        <div class="reload_icon"><img id="starbucks_reload" class="" src="demo_img/reload_icon.png"></div>
+                                    </div>
+                                    
+                                    <div class="card_div">
+                                        <div class="card_icon"><img src="demo_img/compass_card_icon.png"></div>
+                                        
+                                        <div class="card_balance">Balance: $<span id="compass_dollar">0.00</span></div>
+                                        
+                                        <div class="reload_icon"><img id="compass_reload" src="demo_img/reload_icon.png"></div>
+                                    </div>
+                                </div>
+                                
+                                <div id="t_tasks_screen">
+                                    <div class="screen_title">
+                                        <img src="demo_img/tasks_title_icon.png"> <span>TASKS</span>
+                                    </div>
+                                    
+                                    <div id="tasks_body">
+                                        <div class="toggle_div">
+                                            <div class="slider">
+                                                <div class="slideThree">	
+                                                    <input type="checkbox" value="None" id="reminder" name="check" />
+                                                    <label for="reminder"></label>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="toggle_title">REMINDER</div>
+                                        </div>
+                                        
+                                        <div id="task one">
+                                            <div class="tasks_checkbox">
+                                                <div class="checkbox">X</div>
+                                            </div>
+
+                                            <div class="tasks_name">Buy Dog Food</div>
+                                        </div>
+                                        
+                                        <div id="task_two">
+                                            <div class="tasks_checkbox">
+                                                <div class="checkbox">X</div>
+                                            </div>
+
+                                            <div class="tasks_name">Walk the Dog</div>
+                                        </div>
+                                        
+                                        <div id="task_three">
+                                            <div class="tasks_checkbox">
+                                                <div class="checkbox">X</div>
+                                            </div>
+
+                                            <div class="tasks_name">Meeting with the Team</div>
+                                        </div>
+                                        
+                                        <div id="task_four">
+                                            <div class="tasks_checkbox">
+                                                <div class="checkbox">X</div>
+                                            </div>
+
+                                            <div class="tasks_name">Oil Change</div>
+                                        </div>
+                                        
+                                        <div id="task_five">
+                                            <div class="tasks_checkbox">
+                                                <div class="checkbox">X</div>
+                                            </div>
+
+                                            <div class="tasks_name">Renew Insurance</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="t_steps_screen">
+                                    <div class="screen_title">
+                                        <img src="demo_img/steps_title_icon.png"> <span>PEDOMETER</span>
+                                    </div>
+                                    
+                                    <div id="steps_body">
+                                        <div id="steps_number">
+                                            <div class="steps_number_div">10k</div>
+
+                                            <div class="steps_number_div">6k</div>
+
+                                            <div class="steps_number_div">3k</div>
+                                        </div>
+
+                                        <div id="steps_outer_graph">
+                                            <div id="hidden_inner_bar"></div>
+
+                                            <div title="6434 / 155 kCal" class="steps_inner_bar" id="day_one"></div>
+
+                                            <div title="9257 / 167 kCal" class="steps_inner_bar" id="day_two"></div>
+
+                                            <div title="8975 / 163 kCal" class="steps_inner_bar" id="day_three"></div>
+
+                                            <div title="8444 / 160 kCal" class="steps_inner_bar" id="day_four"></div>
+
+                                            <div title="7939 / 159 kCal" class="steps_inner_bar" id="day_five"></div>
+
+                                            <div title="7761 / 159 kCal" class="steps_inner_bar" id="day_six"></div>
+
+                                            <div title="5036 / 120 kCal" class="steps_inner_bar" id="day_seven"></div>
+                                        </div>
+
+                                        <div id="steps_days">
+                                            <div class="steps_days_div">11/30</div>
+
+                                            <div class="steps_days_div">12/01</div>
+
+                                            <div class="steps_days_div">12/02</div>
+
+                                            <div class="steps_days_div">12/03</div>
+
+                                            <div class="steps_days_div">12/04</div>
+
+                                            <div class="steps_days_div">12/05</div>
+
+                                            <div class="steps_days_div">12/06</div>
+                                        </div>
+
+                                        <div id="steps_count">
+                                            Current: 5036 Step / 120 kCal
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div id="screen">
+                    <div id="thumb">
+                    </div>
+                    
+                    <div id="drop_area" class="tab blink">
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div id="footer">
+        </div>
+    </body>
 </html>
