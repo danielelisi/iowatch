@@ -35,7 +35,7 @@ $(document).ready(function(){
     api_key = "4604402aa90e7d71ebe94769b942ede8"
     $(document).ready(function(){
         $.ajax({
-            url:"http://api.openweathermap.org/data/2.5/weather?id=6173331&units=metric&appid=" + api_key,
+            url:"https://api.openweathermap.org/data/2.5/weather?id=6173331&units=metric&appid=" + api_key,
             dataType:"json",
             success:function(resp){
                 console.log(resp);
