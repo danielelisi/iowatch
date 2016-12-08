@@ -1237,22 +1237,22 @@ h4{
 }
 #inputname{
     width: 95%;
-    height: 20px;
+    height: 30px;
     
 }
 #inputemail{
     width: 95%;
-    height: 20px;
+    height: 30px;
     
 }
 #inputsubject{
     width: 95%;
-    height: 20px;
+    height: 30px;
     
 }
 #inputmessage{
     width: 95%;
-    height:120px;
+    height:170px;
     
 }
 #submit{
