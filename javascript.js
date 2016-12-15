@@ -847,51 +847,6 @@ $(document).ready(function(){
     
     $("#compass_reload").on("mouseup", function(){
         $(this).delay(2500).attr("class", "");
-    });
-    
-    var bigDis = document.getElementById('bigpic');
-            
-    var smDis1 = document.getElementById('galpic1');
-    var smDis2 = document.getElementById('galpic2');
-    var smDis3 = document.getElementById('galpic3');
-    var smDis4 = document.getElementById('galpic4');
-    var smDis5 = document.getElementById('galpic5');
-    var smDis6 = document.getElementById('galpic6');
-            
-    smDis1.onclick = function(){
-        bigDis.style.backgroundImage = 'url(img/gallery%20pic%20(2).jpg)';
-        bigDis.style.backgroundSize = 'cover';
-        bigDis.style.backgroundPosition = 'top center';
-    };           
-            
-    smDis2.onclick = function(){
-        bigDis.style.backgroundImage = 'url(img/gallery%20pic%20(3).jpg)';
-        bigDis.style.backgroundSize = 'cover';
-        bigDis.style.backgroundPosition = 'top center';
-    };
-            
-    smDis3.onclick = function(){
-        bigDis.style.backgroundImage = 'url(img/gallery%20pic%20(4).jpg)';
-        bigDis.style.backgroundSize = 'cover';
-        bigDis.style.backgroundPosition = 'top center';
-    };
-            
-    smDis4.onclick = function(){
-        bigDis.style.backgroundImage = 'url(img/gallery%20pic%20(5).jpg)';
-        bigDis.style.backgroundSize = 'cover';
-        bigDis.style.backgroundPosition = 'top center';
-    };
-            
-    smDis5.onclick = function(){
-        bigDis.style.backgroundImage = 'url(img/gallery%20pic%20(8).jpg)';
-        bigDis.style.backgroundSize = 'cover';
-        bigDis.style.backgroundPosition = 'top center';
-    };
-            
-    smDis6.onclick = function(){
-        bigDis.style.backgroundImage = 'url(img/gallery%20pic%20(9).jpg)';
-        bigDis.style.backgroundSize = 'cover';
-        bigDis.style.backgroundPosition = 'top center';
-    };        
+    });   
 });
 
