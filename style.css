@@ -1396,19 +1396,20 @@ h5{
 
 #big{
     position: relative;
-    left: 180px;
-    top: 50px;
-}
-
-.bigpic{
-    width: 500px;
+    margin-left: 100px;
+    top: 0px;
     height: 500px;
+    width: 500px;
+    background: url('img/gallery%20pic%20(1).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 #small{
     position: relative;
-    left: 100px;
-    top: 100px;
+    margin-left: 75px;
+    top: 0px;
     height: 450px;
 }
 
