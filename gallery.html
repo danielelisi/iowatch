@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>iO Watch</title>
+        
+        <link href="style.css" rel="stylesheet" type="text/css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        
+        <script src="javascript.js"></script>
+    </head>
+    
+    <body>
+        <div id="top">
+        </div>
+        
+        <div id="breadcrumb">
+            <a href="index.html">HOME</a> > <a href="gallery.html">GALLERY</a>
+        </div>
+        
+        <div id="body_div">
+            <h2>GALLERY</h2>
+            
+            <div id="gallery">
+                <div id="big">
+                </div>
+                
+                <div id="small">
+                    <img class="smallpic" id="galpic1" src="img/galpic2.jpg" >
+                    <img class="smallpic" id="galpic2" src="img/galpic3.jpg" >
+                    <img class="smallpic" id="galpic3" src="img/galpic4.jpg" >
+                    <img class="smallpic" id="galpic4" src="img/galpic5.jpg" >
+                    <img class="smallpic" id="galpic5" src="img/galpic8.jpg" >
+                    <img class="smallpic" id="galpic6" src="img/galpic9.jpg" >
+                </div>                
+            </div>
+            <hr>
+        </div>
+        
+        <script>
+            var bigDis = document.getElementById('big');
+            
+            var smDis1 = document.getElementById('galpic1');
+            var smDis2 = document.getElementById('galpic2');
+            var smDis3 = document.getElementById('galpic3');
+            var smDis4 = document.getElementById('galpic4');
+            var smDis5 = document.getElementById('galpic5');
+            var smDis6 = document.getElementById('galpic6');
+
+            smDis1.onclick = function(){
+                bigDis.style.backgroundImage = 'url(img/galpic2.jpg)';
+                bigDis.style.backgroundSize = 'cover';
+                bigDis.style.backgroundPosition = 'top center';
+            };           
+
+            smDis2.onclick = function(){
+                bigDis.style.backgroundImage = 'url(img/galpic3.jpg)';
+                bigDis.style.backgroundSize = 'cover';
+                bigDis.style.backgroundPosition = 'top center';
+            };
+
+            smDis3.onclick = function(){
+                bigDis.style.backgroundImage = 'url(img/galpic4.jpg)';
+                bigDis.style.backgroundSize = 'cover';
+                bigDis.style.backgroundPosition = 'top center';
+            };
+
+            smDis4.onclick = function(){
+                bigDis.style.backgroundImage = 'url(img/galpic5.jpg)';
+                bigDis.style.backgroundSize = 'cover';
+                bigDis.style.backgroundPosition = 'top center';
+            };
+
+            smDis5.onclick = function(){
+                bigDis.style.backgroundImage = 'url(img/galpic8.jpg)';
+                bigDis.style.backgroundSize = 'cover';
+                bigDis.style.backgroundPosition = 'top center';
+            };
+
+            smDis6.onclick = function(){
+                bigDis.style.backgroundImage = 'url(img/galpic9.jpg)';
+                bigDis.style.backgroundSize = 'cover';
+                bigDis.style.backgroundPosition = 'top center';
+            };   
+        </script>
+        <div id="footer">
+        </div>
+    </body>
+</html>
